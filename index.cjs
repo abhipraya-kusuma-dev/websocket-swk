@@ -61,6 +61,12 @@ io.on("connection", (socket) => {
   socket.on("play current antrian seragam audio", (audioPath) => {
     io.emit("play current antrian seragam audio", audioPath);
   });
+
+  socket.on("new antrian created", (audioPath) => {
+    io.emit("new antrian created", audioPath);
+  });
+
+  
   // END APLIKASI ANTRIAN
 
   socket.on("disconnect", () => {
